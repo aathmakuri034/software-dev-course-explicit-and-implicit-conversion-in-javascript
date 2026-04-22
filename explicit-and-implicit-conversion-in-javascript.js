@@ -22,11 +22,20 @@ Use console.log() to clearly show the before-and-after type conversions.
 let result = "5" - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = false; // Boolean("false") make the bool true becuase strings are implictly true
 if (isValid) {
     console.log("This is valid!");
+} else {
+    console.log("This is invalid"); // edge case where teh isValid is not true
 }
 
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5; //Need to change the string to number when using addition, otherwise its concatination
 console.log("Total Age: " + totalAge);
+
+if("hello world"){ // implicit type conversion string -> true
+    console.log("Hello World");
+}
+
+let numAge = Number("18"); // explicit type conversion
+console.log("Caleb is " + numAge)
